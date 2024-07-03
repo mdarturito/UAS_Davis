@@ -1,0 +1,1877 @@
+body {
+    font-family: 'Poppins', 'Dax', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* navbar */
+.top-nav {
+    top: 0;
+    position: fixed;
+    box-sizing: border-box;
+    z-index: 3;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #003B95;
+    background: linear-gradient(to left, #0d0057, #000000);
+    color: #FFF;
+    height: 50px;
+    padding: 30px 100px;
+}
+
+.scroll {
+    background: #003B95;
+    background: linear-gradient(to left, #0d0057, #000000);
+    top: -100px;
+    width: 100%;
+    animation: fadedown 0.5s ease 1s forwards;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu>li {
+    margin: 0 1.5rem;
+    overflow: hidden;
+}
+
+.menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+}
+
+.menu-button::before {
+    content: '';
+    margin-top: -8px;
+}
+
+.menu-button::after {
+    content: '';
+    margin-top: 8px;
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+}
+
+/* styling navbar list (home, about, destination, airlines, contact, & booking) */
+ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+}
+
+/* position navbar list (home, about, destination, airlines, contact, & booking) */
+ul li {
+    margin-left: 37px;
+}
+
+/* font navbar list (home, about, destination, airlines, contact, & booking) */
+ul li a {
+    font-size: 16px;
+    font-weight: lighter;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    display: block;
+}
+
+/* color button booking */
+ul li button {
+    background: #F4F7FE;
+}
+
+/* animation click navbar list versi 1 */
+ul li a:hover {
+    transform: translateY(-2px);
+}
+
+/* styling button booking */
+ul li a.booking-nv {
+    margin-top: 2px;
+    background-color: #F4F7FE;
+    border-radius: 30px;
+    border: none;
+    padding: 5px 10px;
+    font-size: 15px;
+    font-weight: bolder;
+    color: #0F294D;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+/* animation button booking click */
+ul li button:hover {
+    transform: translateY(-2px);
+}
+
+/* lingkaran untuk icon user */
+.user {
+    border: solid;
+    padding: 2px 9px;
+    border-radius: 30px;
+    border-width: 2px;
+}
+
+.navbar-logo {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 18px;
+    font-family: 'Pacifico', dex;
+    font-weight: 10;
+    background: rgb(255, 255, 255);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.navbar-logo img {
+    padding-top: 0px;
+    margin-top: 0px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+/* end navbar */
+
+/* style gambar home */
+.hero {
+    margin: 0;
+    height: 100%;
+    background-image: url(../assets/img/gow.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.card-overlay {
+    flex-wrap: wrap;
+    display: flex;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero img {
+    margin: 0;
+    height: 100%;
+}
+
+/* style motto */
+.motto {
+    padding-left: 100px;
+    padding-top: 150px;
+    padding-right: 100px;
+    padding-bottom: 7vw;
+    animation: slide-in 1s ease-in-out;
+    color: white;
+}
+
+.motto h2 {
+    font-size: 4vw;
+    animation: slide-in 1s ease-in-out;
+}
+
+.motto p {
+    font-size: 2.5vw;
+}
+
+/* Style the card title */
+.card-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Style the card content */
+.card-content {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* about us */
+.about-us {
+    align-items: center;
+    padding: 20px 0px 0px 0px;
+    background-color: #1b2838;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 0;
+    width: 100%;
+    color: #0F294D;
+    justify-content: space-evenly;
+}
+
+.about-us img {
+    padding: 0px 0px 0px 100px;
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 30px;
+    animation: fade-in 0.5s ease-in-out;
+}
+
+.about-us1 {
+    align-items: center;
+    padding: 20px 0px 0px 0px;
+    background-color: #F4F7FE;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 0;
+    width: 100%;
+    color: #0F294D;
+    justify-content: space-evenly;
+}
+
+.about-us1 img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 30px;
+    animation: fade-in 0.5s ease-in-out;
+}
+
+.about-us1 .ttg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 700px;
+    height: 300px;
+}
+
+.about-us1 .ttg p {
+    padding-bottom: 50px;
+    animation: slide-up 1s ease-in-out;
+}
+
+.about-us1 .ttg h2 {
+    margin-top: 12px;
+    margin-bottom: 10px;
+}
+
+.about-us1 h2 {
+    font-size: 2em;
+    animation: slide-up 1s ease-in-out;
+}
+
+.about-us .ttg {
+    align-items: center;
+    width: 700px;
+    height: 300px;
+    padding: 0px 0px 0px 100px;
+    color: white;
+}
+
+.about-us .ttg p {
+    padding-bottom: 50px;
+    animation: slide-up 1s ease-in-out;
+}
+
+.about-us .ttg h2 {
+    margin-top: 12px;
+    margin-bottom: 10px;
+}
+
+.about-us h2 {
+    font-size: 2em;
+    animation: slide-up 1s ease-in-out;
+}
+/* end about us */
+
+/* style destinasi */
+.destinasi {
+    padding: 20px 100px;
+    background-color: #102746;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: white;
+}
+
+.destinasi h2 {
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 2em;
+}
+
+.deskripsi-destinasi {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 320px;
+    grid-template-rows: 170px 170px 80px;
+    grid-template-areas: "image" "text";
+    border-radius: 18px;
+    background: white;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    transition: 0.5s ease;
+    cursor: pointer;
+    margin: 30px;
+    animation: slidein 1s ease-in-out;
+}
+
+.card-img {
+    grid-area: image;
+    background: url("../assets/destination/16yogyakarta.jpg");
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+}
+
+.card-desc {
+    grid-area: text;
+    margin: 0px 25px;
+}
+
+.card-desc p {
+    color: rgb(77, 77, 77);
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.card-desc h2 {
+    margin-top: 0px;
+    font-size: 28px;
+}
+
+.card:hover {
+    transform: scale(1.15);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+/*card2*/
+.card-img.card2 {
+    background: url("../assets/destination/20lombok.jpg");
+    background-size: cover;
+
+}
+
+/*card3*/
+.card-img.card3 {
+    background: url("../assets/destination/21labuanbajo.jpg");
+    background-size: cover;
+}
+
+/* style airlines */
+
+/*card4*/
+.airlines .card1 {
+    display: grid;
+    grid-template-columns: 350px;
+    grid-template-rows: 200px;
+    grid-template-areas: "image";
+    border-radius: 0px;
+    background: rgba(255, 255, 255, 0);
+    text-align: left;
+    transition: 0.5s ease;
+    cursor: pointer;
+    margin: 30px;
+    animation: slidein 1s ease-in-out;
+}
+
+.airlines .card1:hover {
+    transform: scale(1.15);
+}
+
+.card-image1.card4 {
+    background: url("../assets/airlines/airasia.png");
+    background-size: cover;
+
+
+}
+
+/*card5*/
+.card-image1.card5 {
+    background: url("../assets/airlines/garudaindonesia.png");
+    background-size: cover;
+    width: 90%;
+}
+
+/*card6*/
+.card-image1.card6 {
+    background: url("../assets/airlines/sriwijayaair.png");
+    background-size: cover;
+    width: 90%;
+}
+
+.container-airlines {
+    background-color: #F4F7FE;
+    padding-bottom: 5%;
+}
+
+.airlines {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.airlines h2 {
+    font-size: 2em;
+}
+
+.al-intro {
+
+    text-align: center;
+    padding: 20px 100px;
+
+}
+
+.al-intro p {
+    margin-top: 0;
+}
+
+.al-intro h2 {
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.btn-sm {
+    background-color: #006CE4;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 7px 30px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+
+}
+
+/* style button learn more pada maskapai dan destinasi */
+.btnLm {
+    display: flex;
+    padding: 20px 100px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* button action */
+.btn-sm:hover {
+    transform: translateY(-3px);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+.btn-sm:active {
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+
+}
+
+/* end button active */
+
+/* style sponsored */
+.sponsored {
+    padding: 20px;
+    text-align: center;
+}
+
+.sponsored img {
+    margin-left: 30px;
+}
+
+/* style footer */
+.container {
+    display: flex;
+    padding: 0 100px;
+}
+
+.site-footer {
+    background-color: #F4F7FE;
+    font-size: 15px;
+    line-height: 24px;
+    color: #0F294D;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.container1 {
+    background-color: #000000;
+    padding: 10px;
+    color: white;
+
+}
+
+.site-footer .footer-center i {
+    background-color: #003B95;
+    color: #ffffff;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px 10px 0px;
+    vertical-align: middle;
+}
+
+.site-footer .footer-center i.fa-envelope {
+    font-size: 17px;
+    line-height: 38px;
+}
+
+.site-footer .footer-center p {
+    display: inline-block;
+    color: #0F294D;
+    font-weight: 400;
+    vertical-align: middle;
+    margin: 0;
+    font-size: 15px;
+}
+
+.site-footer .footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 2;
+}
+
+.site-footer .footer-center a {
+    color: #0F294D;
+    text-decoration: none;
+    ;
+}
+
+.site-footer .footer-links a:before {
+    content: "|";
+    font-weight: 300;
+    font-size: 20px;
+    left: 0;
+    color: #fff;
+    display: inline-block;
+    padding-right: 5px;
+}
+
+.site-footer .footer-links .link-1:before {
+    content: none;
+}
+
+.site-footer h1 {
+    color: #0F294D;
+    font-size: 3vw;
+    line-height: 0.8em;
+    margin-top: 25px;
+    letter-spacing: 2px
+}
+
+.site-footer a {
+    color: #ffffff;
+}
+
+.site-footer a:hover {
+    color: #2fcfff;
+    text-decoration: none;
+}
+
+.footer-links {
+    padding-left: 0;
+    list-style: none
+}
+
+.footer-links li {
+    display: block
+}
+
+.footer-links a {
+    color: #ffffff
+}
+
+.footer-links a:active,
+.footer-links a:focus,
+.footer-links a:hover {
+    color: #47f9ff;
+    text-decoration: none;
+}
+
+.footer-links.inline li {
+    display: inline-block
+}
+
+.row {
+    display: flex;
+    padding: 15px 100px;
+
+}
+
+.row div.footer1 {
+    margin-right: 20%;
+
+}
+
+.row1 {
+    display: flex;
+    justify-content: center;
+
+}
+
+.copyright-text {
+    margin: 0
+}
+
+/* responsive style */
+
+/* The contact form */
+
+.site-footer form {
+    display: inline-block;
+}
+
+.site-footer form input,
+.site-footer form textarea {
+    display: block;
+    border-radius: 13px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    box-shadow: 1px 4px 4px 1px rgba(0, 0, 0, 0.445);
+    border: none;
+    resize: none;
+
+    font: inherit;
+    font-size: 14px;
+    font-weight: normal;
+    color: #0F294D;
+
+    width: 480px;
+    padding: 20px;
+}
+
+.site-footer ::-webkit-input-placeholder {
+    color: #636363;
+}
+
+.site-footer ::-moz-placeholder {
+    color: #5c666b;
+    opacity: 1;
+}
+
+.site-footer :-ms-input-placeholder {
+    color: #5c666b;
+}
+
+
+.site-footer form input {
+    height: 55px;
+    margin-bottom: 15px;
+}
+
+.site-footer form textarea {
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.site-footer form button {
+    border-radius: 30px;
+    background-color: #006CE4;
+    color: #ffffff;
+    border: 0;
+    padding: 10px 30px;
+    float: left;
+    font-family: 'Poppins';
+}
+
+/* ------------------------------------------------------- */
+/* page about */
+.intro-about {
+    position: relative;
+    text-align: left;
+    color: white;
+
+}
+
+.hero1 {
+    margin: 0;
+    height: 100%;
+    background-image: url(../assets/img/pemandanganpesawat.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.hero img {
+
+    margin: 0;
+    height: 100%;
+
+}
+
+.motto1 {
+    padding-left: 100px;
+    padding-top: 150px;
+    padding-right: 100px;
+    padding-bottom: 7vw;
+    animation: slide-in 1s ease-in-out;
+    color: white;
+}
+
+.motto1 h2 {
+    font-size: 4vw;
+    animation: slide-in 1s ease-in-out;
+}
+
+.motto1 p {
+    font-size: 2.5vw;
+}
+
+
+.card-about a {
+    position: relative;
+    color: #0f294d;
+    text-decoration: none;
+    margin: 0px 10px;
+    font-size: 20px;
+}
+
+.card-about a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: #0F294D;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+.card-about a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.anggota-grup {
+    padding: 50px 100px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.anggota-group .ag-intro h2 {
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 2em;
+}
+
+.ag-intro h2 {
+    margin-bottom: 3px;
+    text-align: center;
+    font-size: 2em;
+
+}
+
+.ag-intro {
+    color: #0F294D;
+}
+
+.deskripsi-ag {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+
+.card-about {
+    display: grid;
+    grid-template-columns: 308px;
+    grid-template-rows: 300px 65px 90px;
+    grid-template-areas: "image" "text";
+    border-radius: 20px;
+    background-color: transparent;
+    text-align: center;
+    transition: 0.5s ease;
+    cursor: pointer;
+    margin: 30px;
+}
+
+/* laya */
+.card-img-ag {
+    grid-area: image;
+    background: url("../assets/members/layalia.jpg");
+    border-radius: 500px;
+    background-size: cover;
+}
+
+.card-desc-ag {
+    grid-area: text;
+    margin: 0px 25px;
+}
+
+.card-desc-ag p {
+    color: rgb(77, 77, 77);
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.card-desc-ag h2 {
+    margin-top: 0px;
+    font-size: 28px;
+}
+
+.card-about:hover {
+    transform: scale(1.13);
+}
+
+/*agung*/
+.card-img-ag.card7 {
+    background: url("../assets/members/agung.jpg");
+    background-size: cover;
+}
+
+/*ajeng*/
+.card-img-ag.card8 {
+    background: url("../assets/members/ajeng.jpeg");
+    background-size: cover;
+}
+
+/* izza */
+.card-img-ag.card9 {
+    background: url("../assets/members/izza.jpg");
+    background-size: cover;
+}
+
+/* fahril */
+.card-img-ag.card10 {
+    background: url("../assets/members/fahril.jpg");
+    background-size: cover;
+}
+
+/* frida */
+.card-img-ag.card11 {
+    background: url("../assets/members/afrida.jpg");
+    background-size: cover;
+}
+
+/* dina */
+.card-img-ag.card12 {
+    background: url("../assets/members/dina.jpeg");
+    background-size: cover;
+}
+
+.img-abt {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+
+}
+
+/* -------------------page Destinasi Style---------------------------- */
+.ds-intro-pg {
+    color: #0F294D;
+    font-size: 2vw;
+    justify-content: center;
+    padding: 100px 100px 0px;
+    display: flex;
+    align-items: center;
+    animation: slide-up 1s ease-in-out;
+
+}
+
+.card-price {
+    font-size: 20px;
+    /* color: #003B95; */
+    text-align: left;
+    font-weight: bolder;
+    padding: 5px;
+    /* border: 1px solid #ccc;
+    background-color: #f5f5f5; */
+  }
+  
+.booking-card {
+    background-color: #006CE4;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 7px 30px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    
+}
+
+.booking-card:hover {
+    background-color: #004CA3;
+}
+
+.booking-card:active {
+  background-color: #00286F;
+}
+
+.booking-card:hover {
+    transform: rotate(15deg);
+  }
+
+.card-img.card1 {
+    background: url("../assets/destination/1.Aceh.jpg");
+    background-size: cover;
+
+}
+
+.card-img.card2 {
+    background: url("../assets/destination/2.\ Batam.jpg");
+    background-size: cover;
+}
+
+.card-img.card3 {
+    background: url("../assets/destination/3.\ Bengkulu.jpeg");
+    background-size: cover;
+}
+
+.card-img.card4 {
+    background: url("../assets/destination/4.\ Jambi.jpg");
+    background-size: cover;
+}
+
+.card-img.card5 {
+    background: url("../assets/destination/5.\ Medan.jpg");
+    background-size: cover;
+}
+
+.card-img.card6 {
+    background: url("../assets/destination/6.\ Padang.jpg");
+    background-size: cover;
+}
+
+.card-img.card7 {
+    background: url("../assets/destination/7.\ Palembang.jpg");
+    background-size: cover;
+}
+
+.card-img.card8 {
+    background: url("../assets/destination/8.pangkalpinang.jpg");
+    background-size: cover;
+}
+
+.card-img.card9 {
+    background: url("../assets/destination/9.pekanbaru.jpg");
+    background-size: cover;
+}
+
+.card-img.card10 {
+    background: url("../assets/destination/10.bandarlampung.jpg");
+    background-size: cover;
+}
+
+.card-img.card11 {
+    background: url("../assets/destination/11.\ Tanjung\ Pinang.jpg");
+    background-size: cover;
+}
+
+.card-img.card12 {
+    background: url("../assets/destination/12.\ Bandung.jpg");
+    background-size: cover;
+}
+
+.card-img.card13 {
+    background: url("../assets/destination/13.\ Bangka\ Belitung.png");
+    background-size: cover;
+}
+
+.card-img.card14 {
+    background: url("../assets/destination/14malang.jpg");
+    background-size: cover;
+}
+
+.card-img.card15 {
+    background: url("../assets/destination/15semarang.jpg");
+    background-size: cover;
+}
+
+.card-img.card16 {
+    background: url("../assets/destination/16yogyakarta.jpg");
+    background-size: cover;
+}
+
+.card-img.card17 {
+    background: url("../assets/destination/17solo.jpg");
+    background-size: cover;
+}
+
+.card-img.card18 {
+    background: url("../assets/destination/18surabaya.jpg");
+    background-size: cover;
+}
+
+.card-img.card19 {
+    background: url("../assets/destination/19denpasar.jpg");
+    background-size: cover;
+}
+
+.card-img.card20 {
+    background: url("../assets/destination/20lombok.jpg");
+    background-size: cover;
+}
+
+.card-img.card21 {
+    background: url("../assets/destination/21labuanbajo.jpg");
+    background-size: cover;
+}
+
+.card-img.card22 {
+    background: url("../assets/destination/22kupang.jpg");
+    background-size: cover;
+}
+
+.card-img.card23 {
+    background: url("../assets/destination/23pontianak.jpg");
+    background-size: cover;
+}
+
+.card-img.card24 {
+    background: url("../assets/destination/24banjarmasin.jpeg");
+    background-size: cover;
+}
+
+.card-img.card25 {
+    background: url("../assets/destination/25balikpapan.jpg");
+    background-size: cover;
+}
+
+.card-img.card26 {
+    background: url("../assets/destination/26ambon.jpg");
+    background-size: cover;
+}
+
+.card-img.card27 {
+    background: url("../assets/destination/27.Mataram.jpg");
+    background-size: cover;
+}
+
+.card-img.card28 {
+    background: url("../assets/destination/28.Kendari.jpg");
+    background-size: cover;
+}
+
+.card-img.card29 {
+    background: url("../assets/destination/29.Gorontalo.jpg");
+    background-size: cover;
+}
+
+.card-img.card30 {
+    background: url("../assets/destination/30.Makassar.jpg");
+    background-size: cover;
+}
+
+.card-img.card31 {
+    background: url("../assets/destination/31.Manado.jpg");
+    background-size: cover;
+}
+
+.card-img.card32 {
+    background: url("../assets/destination/32.Palu.jpg");
+    background-size: cover;
+}
+
+.card-img.card33 {
+    background: url("../assets/destination/33.Ternate.jpg");
+    background-size: cover;
+}
+
+.card-img.card34 {
+    background: url("../assets/destination/34.Samarinda.jpg");
+    background-size: cover;
+}
+
+.card-img.card35 {
+    background: url("../assets/destination/35.Biak\ Papua.jpg");
+    background-size: cover;
+}
+
+.card-img.card36 {
+    background: url("../assets/destination/36.Jayapura.jpg");
+    background-size: cover;
+}
+
+.card-img.card37 {
+    background: url("../assets/destination/37.Merauke\ Papua.jpg");
+    background-size: cover;
+}
+
+.card-img.card38 {
+    background: url("../assets/destination/38.Timika.png");
+    background-size: cover;
+}
+
+.card-img.card39 {
+    background: url("../assets/destination/39.Sorong.jpg");
+    background-size: cover;
+}
+
+/* -------style page airlines------ */
+.card-image1.card7 {
+    background: url("../assets/airlines/batikair.png");
+    background-size: cover;
+
+}
+
+.card-image1.card8 {
+    background: url("../assets/airlines/lionair.png");
+    background-size: cover;
+
+}
+
+.al-intro-pg {
+    padding: 80px 100px 0px;
+    justify-content: center;
+    text-align: center;
+    font-size: 2vw;
+    color: #0F294D;
+    animation: slide-up 1s ease-in-out;
+}
+
+/* page booking */
+.hero2 {
+    height: 100%;
+}
+
+.container3 {
+    display: flex;
+    width: auto;
+    margin: 100px;
+}
+
+.images {
+    margin: 0px 2% 0px 0px;
+    width: 50%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-image: url(../assets/img/bookingimglebar.jpeg);
+    background-size: cover;
+    background-repeat: repeat-x;
+    background-position: center;
+
+}
+
+.booking-form {
+    flex: 2;
+    background-color: #0062E3;
+    border: 1px solid rgb(255, 255, 255)4f4;
+    border-radius: 10px;
+    padding: 50px;
+}
+
+.booking-form h2 {
+    color: white;
+    padding: 0px 30px;
+}
+
+.booking-form h3 {
+    color: white;
+    padding: 0px 30px;
+}
+
+.form-group {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-input {
+    font-family: 'poppins';
+    font-size: 15px;
+    width: 85%;
+    padding: 12px;
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+}
+
+.button-booking {
+    display: flex;
+    justify-content: center;
+}
+
+.form-button {
+    margin-top: 10px;
+    background-color: #f7f8f9;
+    color: #0F294D;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    align-items: center;
+    font-family: 'poppins';
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.form-button:hover {
+    background-color: #0F294D;
+    color: white;
+}
+
+div.sec1 {
+    padding-left: 5%;
+    display: inline-block;
+    width: 95%;
+}
+
+div.elem-group {
+    width: 92.5%;
+    margin: 5%;
+}
+
+div.elem-group.inlined {
+    margin: 0px 0px 0px 4%;
+    padding: 0px 0px 0px 0px;
+    width: 44%;
+    display: inline-block;
+    align-self: center;
+}
+
+div.elem-group.inlined label {
+    color: white;
+    padding-left: 13px;
+    font-size: 15px;
+    padding-bottom: 0;
+    position: relative;
+}
+
+select {
+    width: 98%;
+    height: 50px;
+    border-radius: 20px;
+    padding: 0px 10px;
+    font-family: 'poppins';
+    font-size: 15px;
+}
+
+select:hover {
+    background-color: #F4F7FE;
+}
+
+select:focus {
+    outline: none;
+    border-color: blue;
+}
+
+/* booking from and to */
+::selection {
+    color: #fff;
+    background: #4285f4;
+}
+
+.wrapper {
+    padding-right: 3%;
+    width: 46%;
+    display: inline-block;
+}
+
+#wrapper {
+    padding-right: 0px;
+    width: 46%;
+}
+
+div.elem-group #adult {
+    width: 90%;
+    display: inline-block;
+    padding-right: 0px;
+}
+
+div.elem-group #child {
+    width: 90%;
+    padding-right: 0px;
+}
+
+.select-btn,
+li {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.select-btn {
+    height: 45px;
+    padding: 0 10px;
+    font-size: 15px;
+    background: #fff;
+    border-radius: 20px;
+    justify-content: space-between;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.select-btn i {
+    font-size: 25px;
+    transition: transform 0.3s linear;
+}
+
+.wrapper.active .select-btn i {
+    transform: rotate(-180deg);
+}
+
+.content {
+    display: none;
+    padding: 10px;
+    width: 160px;
+    margin-top: 5px;
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper.active .content {
+    position: absolute;
+    display: inline-block;
+}
+
+.content .search {
+    position: relative;
+}
+
+.search i {
+    top: 50%;
+    left: 15px;
+    color: #999;
+    font-size: 20px;
+    pointer-events: none;
+    transform: translateY(-50%);
+    position: absolute;
+}
+
+.search input {
+    height: 37px;
+    width: 100px;
+    outline: none;
+    font-size: 17px;
+    border-radius: 5px;
+    padding: 0 20px 0 43px;
+    border: 1px solid #B3B3B3;
+}
+
+.search input:focus {
+    padding-left: 42px;
+    border: 2px solid #4285f4;
+}
+
+.search input::placeholder {
+    color: #bfbfbf;
+}
+
+.content .options {
+    display: block;
+    margin-top: 10px;
+    max-height: 140px;
+    overflow-y: auto;
+    padding-right: 7px;
+    padding-left: 0px;
+}
+
+.content ul li {
+    margin: 0;
+}
+
+.options::-webkit-scrollbar {
+    width: 7px;
+}
+
+.options::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 25px;
+}
+
+.options::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 25px;
+}
+
+.options::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+}
+
+.options li {
+    height: 35px;
+    padding: 0 5px;
+    font-size: 15px;
+}
+
+.options li:hover,
+li.selected {
+    border-radius: 5px;
+    background: #f2f2f2;
+}
+
+/* riwayat booking table */
+.riwayat-booking h2 {
+    padding: 5px 100px;
+    background-color: white;
+}
+
+.wrap-table {
+    margin: 30px 100px;
+    padding: 10PX 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+}
+
+table caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+}
+
+table tr {
+    background-color: #F4F7FE;
+    border-bottom: 1px solid #ddd;
+    padding: .35em;
+}
+
+table th,
+table td {
+    overflow: auto;
+    padding: .625em;
+    text-align: center;
+}
+
+table th {
+    color: white;
+    background-color: #006CE4;
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+table .nama {
+    border-top-left-radius: 10px;
+}
+
+table .air-lines {
+    border-top-right-radius: 10px;
+}
+
+
+@keyframes fadedown {
+    0% {
+        top: -100px;
+    }
+
+    100% {
+        top: 0px;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(-20%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slidein {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* responsive style */
+@media screen and (max-width: 700px) {
+    .images {
+        position: absolute;
+        visibility: hidden;
+    }
+
+}
+@media screen and (max-width: 800px) {
+    .menu-button-container {
+        display: flex;
+    }
+
+    .menu {
+        position: absolute;
+        top: 0;
+        margin-top: 50px;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #menu-toggle~.menu li {
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    #menu-toggle:checked~.menu li {
+        border: 1px solid #003B95;
+        height: 2em;
+        padding: 0.5em;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .menu>li {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0.5em 0;
+        width: 100%;
+        color: white;
+        background-color: #003B95;
+    }
+
+    .menu>li:not(:last-child) {
+        border-bottom: 1px solid #444;
+        height: 30px;
+    }
+
+    .top-nav {
+        padding: 0px 20px;
+    }
+
+    .site-footer {
+        padding-bottom: 0;
+    }
+
+    .site-footer .contact form input,
+    .site-footer .contact form textarea {
+        display: block;
+        border-radius: 13px;
+        box-sizing: border-box;
+        background-color: #ffffff;
+        box-shadow: 1px 4px 4px 1px rgba(0, 0, 0, 0.445);
+        border: none;
+        resize: none;
+        font: inherit;
+        font-size: 14px;
+        font-weight: normal;
+        color: #0F294D;
+        width: 63vw;
+        padding: 20px;
+    }
+
+    .about-us {
+        justify-content: center;
+    }
+
+    .about-us img {
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        padding: 0px !important;
+    }
+
+    .about-us .ttg {
+        height: 85%;
+        text-align: center;
+        justify-content: center;
+        padding: 0px 10px;
+        margin-bottom: 10%;
+    }
+
+    .destinasi {
+        padding: 20px;
+    }
+
+    .row {
+        display: block;
+        padding: 3px 5px;
+    }
+
+    .row div.footer1 {
+        margin-right: 0;
+    }
+
+    .site-footer h1 {
+        font-size: 5vw;
+        line-height: 1.5em;
+    }
+
+    .site-footer div.footer1 p {
+        font-size: 15px;
+    }
+
+    .site-footer div.footer1 p span {
+        font-size: 15px;
+    }
+
+    .site-footer .copyright-text,
+    .site-footer {
+        text-align: center
+    }
+
+    .contact {
+        width: auto;
+        height: 100%;
+        margin-bottom: 30px;
+    }
+
+    .wrap-table {
+        margin: 15px;
+    }
+
+    table {
+        border: 0;
+    }
+
+    table caption {
+        font-size: 1.3em;
+    }
+
+    table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    table tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: .625em;
+    }
+
+    table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        text-align: right;
+    }
+
+    table td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    table td:last-child {
+        border-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .container3 {
+        display: block;
+        justify-content: center;
+    }
+
+    .booking-form {
+        margin: 100px 0px;
+        padding: 10px 20px 20px;
+    }
+
+    .booking-form h2 {
+        padding: 0px 50px;
+    }
+
+    .booking-form h3 {
+        padding: 0px 50px;
+    }
+
+    div.elem-group.inlined {
+        margin: 0px 0px 0px 3.5% !important;
+        padding: 0px 0px 0px 0px;
+        width: 44.5% !important;
+        display: inline-block;
+    }
+
+    div.elem-group.inlined label {
+        padding-left: 30px;
+        top: 3px;
+    }
+
+    .form-input {
+        padding: 12px 15px 12px 12px;
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+    .wrap-table {
+        margin: 3%;
+    }
+
+    .container3 {
+        display: flex;
+        width: auto;
+        margin: 100px 5%;
+    }
+
+    .booking-form {
+        margin: 0px;
+        padding: 10px 10px 20px;
+    }
+
+    div.elem-group.inlined {
+        margin: 0px 0px 0px 4.5%;
+        padding: 0px 0px 0px 0px;
+        width: 43.5%;
+        display: inline-block;
+        align-self: center;
+    }
+}
+
+@media screen and (max-width:1250px) {
+    .site-footer [class^=col-] {
+
+        margin-bottom: 10px
+    }
+
+    .about-us {
+        justify-content: center;
+        padding: auto;
+    }
+
+    .about-us img {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        padding: 0px 100px;
+    }
+
+    .about-us .ttg {
+        text-align: center;
+        justify-content: center;
+        padding: 0px 100px;
+        margin-bottom: 5vw;
+    }
+
+    .row {
+        justify-content: center;
+        padding: 3px 20px;
+    }
+
+    .site-footer h1 {
+        font-size: 4.5vw;
+        line-height: 1.5em;
+    }
+
+    .site-footer div.footer1 p {
+        font-size: 15px;
+    }
+
+    .site-footer div.footer1 p span {
+        font-size: 15px;
+    }
+
+    .site-footer .contact form input,
+    .site-footer .contact form textarea {
+        display: block;
+        border-radius: 13px;
+        box-sizing: border-box;
+        background-color: #ffffff;
+        box-shadow: 1px 4px 4px 1px rgba(0, 0, 0, 0.445);
+        border: none;
+        resize: none;
+        font: inherit;
+        font-size: 14px;
+        font-weight: normal;
+        color: #0F294D;
+        width: 35vw;
+        padding: 20px;
+    }
+
+    .row div.footer1 {
+        margin-right: 10%;
+    }
+
+    .top-nav {
+        padding: 0px 20px;
+    }
+
+    .menu>li {
+        margin: 0px 10px;
+    }
+}
+
+/* end responsive style */

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travlio</title>
+    <!-- font  logo -->
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'>
+    <!-- font poppins-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <!-- link css -->
+    <link rel="stylesheet" href="css\style.css">
+    <!-- font awsome "Travlio" -->
+    <script src="https://kit.fontawesome.com/99449ba607.js" crossorigin="anonymous"></script>
+    <!-- Iconscout Link For Icons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- shortcut icon -->
+    <link rel="shortcut icon" href="assets/icon/logo biru.png">
+    <!-- sweet alert -->
+</head>
+
+<body>
+    <!-- navbar -->
+    <section class="top-nav">
+        <div class="navbar-logo">
+            <img src="./assets/img/travliologo.png" alt="logo">
+        </div>
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+        </label>
+
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="destination.html">Destination</a></li>
+            <li><a href="airlines.html">Airlines</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="booking.html" class="booking-nv">Booking</a></button></li>
+        </ul>
+    </section>
+    <!-- end navbar -->
+
+
+    <div class="container3">
+        <div class="images"></div>
+        <form class="booking-form" id="booking-form" method="post">
+            <h2>Book Your Seat</h2>
+            <h3>Book your seat now and secure your spot for an unforgettable journey.</h3>
+            <div class="form-group">
+                <input type="text" id="name" name="name" class="form-input" placeholder="Name"required>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" name="email" class="form-input" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <input type="tel" id="phone" name="phone" class="form-input" placeholder="Phone" required>
+            </div>
+            <div class="form-group">
+                <input type="date" id="date" name="date_destination" class="form-input">
+            </div>
+            <div class="elem-group inlined">
+                <select class="select" id="from" name="from" required>
+                    <option value="" disabled selected>From</option>
+                    <option value="Banda Aceh">Banda Aceh</option>
+                    <option value="Batam">Batam</option>
+                    <option value="Bengkulu">Bengkulu</option>
+                    <option value="Jambi">Jambi</option>
+                    <option value="Medan">Medan</option>
+                    <option value="Padang">Padang</option>
+                    <option value="Palembang">Palembang</option>
+                    <option value="Pangkal Pinang">Pangkal Pinang</option>
+                    <option value="Pekanbaru">Pekanbaru</option>
+                    <option value="Bandar Lampung">Bandar Lampung</option>
+                    <option value="Tanjung Pinang">Tanjung Pinang</option>
+                    <option value="Bandung">Bandung</option>
+                    <option value="Bangka Belitung">Bangka Belitung</option>
+                    <option value="Malang">Malang</option>
+                    <option value="Semarang">Semarang</option>
+                    <option value="Yogyakarta">Yogyakarta</option>
+                    <option value="Solo">Solo</option>
+                    <option value="Surabaya">Surabaya</option>
+                    <option value="Denpasar">Denpasar</option>
+                    <option value="Lombok">Lombok</option>
+                    <option value="Labuan Bajo">Labuan Bajo</option>
+                    <option value="Kupang">Kupang</option>
+                    <option value="Pontianak">Pontianak</option>
+                    <option value="Banjarmasin">Banjarmasin</option>
+                    <option value="Balikpapan">Balikpapan</option>
+                    <option value="Ambon">Ambon</option>
+                    <option value="Mataram">Mataram</option>
+                    <option value="Kendari">Kendari</option>
+                    <option value="Gorontalo">Gorontalo</option>
+                    <option value="Makassar">Makassar</option>
+                    <option value="Manado">Manado</option>
+                    <option value="Palu">Palu</option>
+                    <option value="Ternate">Ternate</option>
+                    <option value="Samarinda">Samarinda</option>
+                    <option value="Biak">Biak</option>
+                    <option value="Jayapura">Jayapura</option>
+                    <option value="Marauke">Marauke</option>
+                    <option value="Timika">Timika</option>
+                    <option value="Sorong">Sorong</option>
+                </select>
+            </div>
+            <div class="elem-group inlined">
+                <select class="select" id="to" name="to" required>
+                    <option value="" disabled selected>To</option>
+                    <option value="Banda Aceh">Banda Aceh</option>
+                    <option value="Batam">Batam</option>
+                    <option value="Bengkulu">Bengkulu</option>
+                    <option value="Jambi">Jambi</option>
+                    <option value="Medan">Medan</option>
+                    <option value="Padang">Padang</option>
+                    <option value="Palembang">Palembang</option>
+                    <option value="Pangkal Pinang">Pangkal Pinang</option>
+                    <option value="Pekanbaru">Pekanbaru</option>
+                    <option value="Bandar Lampung">Bandar Lampung</option>
+                    <option value="Tanjung Pinang">Tanjung Pinang</option>
+                    <option value="Bandung">Bandung</option>
+                    <option value="Bangka Belitung">Bangka Belitung</option>
+                    <option value="Malang">Malang</option>
+                    <option value="Semarang">Semarang</option>
+                    <option value="Yogyakarta">Yogyakarta</option>
+                    <option value="Solo">Solo</option>
+                    <option value="Surabaya">Surabaya</option>
+                    <option value="Denpasar">Denpasar</option>
+                    <option value="Lombok">Lombok</option>
+                    <option value="Labuan Bajo">Labuan Bajo</option>
+                    <option value="Kupang">Kupang</option>
+                    <option value="Pontianak">Pontianak</option>
+                    <option value="Banjarmasin">Banjarmasin</option>
+                    <option value="Balikpapan">Balikpapan</option>
+                    <option value="Ambon">Ambon</option>
+                    <option value="Mataram">Mataram</option>
+                    <option value="Kendari">Kendari</option>
+                    <option value="Gorontalo">Gorontalo</option>
+                    <option value="Makassar">Makassar</option>
+                    <option value="Manado">Manado</option>
+                    <option value="Palu">Palu</option>
+                    <option value="Ternate">Ternate</option>
+                    <option value="Samarinda">Samarinda</option>
+                    <option value="Biak">Biak</option>
+                    <option value="Jayapura">Jayapura</option>
+                    <option value="Marauke">Marauke</option>
+                    <option value="Timika">Timika</option>
+                    <option value="Sorong">Sorong</option>
+                </select>
+            </div>
+
+            <div class="elem-group inlined" id="adult">
+                <label for="adult">Adults</label>
+                <input type="number" id="adult" name="adult" class="form-input" placeholder="0" min="1" required>
+            </div>
+
+            <div class="elem-group inlined">
+                <label for="child">Children</label>
+                <input type="number" id="child" name="children" class="form-input" placeholder="0" min="0" required>
+            </div>
+
+
+            <div class="elem-group">
+                <select class="select" id="airlines-selection" name="airline" required>
+                    <option value="" disabled selected>Choose Airlines</option>
+                    <option value="Air Asia">Air Asia</option>
+                    <option value="Batik Air">Batik Air</option>
+                    <option value="Lion Air">Lion Air</option>
+                    <option value="Garuda Indonesia">Garuda Indonesia</option>
+                    <option value="Sriwijaya Air">Sriwijaya Air</option>
+                </select>
+            </div>
+
+            <div class="button-booking">
+                <button type="submit" class="form-button">Book Now</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- menampilkan riwayat booking -->
+    <div class="riwayat-booking">
+        <h2>Booking History</h2>
+        <div class="wrap-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="nama" scope="col">Name</th>
+                        <th scope="col">E-Mail</th>
+                        <th scope="col">Phone</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">From</th>
+                        <th scope="col">To</th>
+                        <th scope="col">Adults</th>
+                        <th scope="col">Children</th>
+                        <th class="air-lines" scope="col">Airlines</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- diambil dari database melalui api -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="site-footer">
+        <div class="container1">
+            <div class="row1">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by
+                        <a href="index.html" class="footer-links">Travlio</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/booking.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>
