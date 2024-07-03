@@ -846,7 +846,7 @@ ul li button:hover {
 /* laya */
 .card-img-ag {
     grid-area: image;
-    background: url("../assets/members/layalia.jpg");
+    background: url("../assets/members/artur.jpg");
     border-radius: 500px;
     background-size: cover;
 }
@@ -880,7 +880,7 @@ ul li button:hover {
 
 /*ajeng*/
 .card-img-ag.card8 {
-    background: url("../assets/members/ajeng.jpeg");
+    background: url("../assets/members/anom.jpg");
     background-size: cover;
 }
 
