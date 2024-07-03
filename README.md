@@ -1,85 +1,44 @@
-Travlio - Pemesanan Tiket Pesawat
-Selamat datang di Travlio! Terima kasih telah mengunjungi website kami, tempat terbaik untuk pemesanan tiket pesawat dengan pengalaman perjalanan yang tak terlupakan.
-Dengan antarmuka yang ramah pengguna dan fitur canggih, Travlio hadir untuk membuat perjalanan Anda lebih mudah dan menyenangkan.
+# STEW - Game Status Prediction
 
-Tentang Travlio
-Travlio adalah platform pemesanan tiket pesawat yang didedikasikan untuk memberikan pengalaman terbaik kepada pelanggan kami. 
-Dengan jaringan kerjasama yang luas dengan maskapai penerbangan terkemuka, Travlio menawarkan berbagai pilihan rute.
+![STEW Logo](https://example.com/path-to-your-logo.png)
 
-Fitur Utama
-1. Pemesanan Mudah
-Travlio menyediakan antarmuka yang sederhana dan intuitif, memungkinkan Anda melakukan pemesanan tiket pesawat dengan beberapa langkah mudah.
-Pilih tanggal, tujuan, dan maskapai pilihan Anda - dan Anda siap untuk terbang!
+## Welcome to STEW!
 
-2. Destinasi Perjalanan Beragam
-Travlio memberikan destinasi perjalanan yang komprehensif. Dengan begitu, Anda dapat merencanakan perjalanan Anda dengan lebih baik.
+STEW is your go-to platform for predicting the status of your favorite games. Stay up-to-date with real-time status predictions for popular games like Dota, CS2, Terraria, PUBG, and GTAV.
 
-3. Keamanan dan Keandalan
-Keamanan informasi pribadi Anda adalah prioritas kami. Travlio menggunakan teknologi keamanan terkini untuk memastikan bahwa setiap transaksi dan data pribadi Anda tetap aman.
+## Features
 
-Cara Menggunakan Travlio
-Pencarian Tiket bisa klik button Booking
-- Masukkan nama, email, nomor Handphone.
-- Pilih waktu penerbangan
-- Masukkan detail perjalanan Anda.
-- Pilih jenis penumpang.
-- Pilih Airlines
-- Pembayaran Aman
+- **Dota 2**: Get the latest predictions and updates for Dota 2.
+  ![Dota 2 Logo](https://example.com/path-to-dota2-logo.png)
+  
+- **Counter-Strike 2 (CS2)**: Stay informed about the status of Counter-Strike 2.
+  ![CS2 Logo](https://example.com/path-to-cs2-logo.png)
+  
+- **Terraria**: Check the current predictions for Terraria.
+  ![Terraria Logo](https://example.com/path-to-terraria-logo.png)
+  
+- **PUBG**: Know the latest status updates for PUBG.
+  ![PUBG Logo](https://example.com/path-to-pubg-logo.png)
+  
+- **Grand Theft Auto V (GTAV)**: Stay updated on GTAV status predictions.
+  ![GTAV Logo](https://example.com/path-to-gtav-logo.png)
 
-Riwayat pemesanan tiket akan tampil di website.
-Gunakan metode pembayaran yang nyaman dan aman.
-Konfirmasi pembayaran Anda dengan mudah.
-Dapatkan Konfirmasi
+## How to Use
 
-Terima konfirmasi pemesanan melalui email.
-Akses informasi perjalanan Anda kapan saja.
-Hubungi Kami
-Apakah Anda memiliki pertanyaan, masukan, atau membutuhkan bantuan? Tim dukungan pelanggan Travlio siap membantu Anda. Hubungi kami melalui email atau melalui halaman kontak kami.
+1. **Visit our website**: [STEW](https://yourwebsite.com)
+2. **Select a game**: Choose from Dota, CS2, Terraria, PUBG, or GTAV.
+3. **View Predictions**: Get the latest status predictions and updates for your selected game.
 
-Terima kasih telah memilih Travlio untuk perjalanan Anda. Selamat menikmati perjalanan Anda dengan kenyamanan dan keamanan bersama Travlio!
+## Why Use STEW?
 
+- **Real-time Updates**: Get up-to-the-minute predictions and status updates.
+- **User-friendly Interface**: Easy to navigate and find information quickly.
+- **Comprehensive Coverage**: All your favorite games in one place.
 
-    
-    <!-- airlines -->
-    <div class="container-airlines">
-        <div class="al-intro">
-            <h2>Airlines</h2>
-            <p>These are the many airlines available in Travlio. We collaborate with airlines that provide good service. These airlines offer various services and amenities, such as in flight entertainment, Wi-Fi, meals, and more. You can compare the prices and features of different airlines on travlio to find the best deal for your trip.</p>
-        </div>
-        <div class="airlines">
-            <div class="card1">
-                <div class="card-image1 card4"></div>
-            </div>
+## Contact Us
 
-            <div class="card1">
-                <div class="card-image1 card5"></div>
-            </div>
+If you have any questions, feedback, or suggestions, feel free to contact us at [support@stew.com](mailto:support@stew.com).
 
-            <div class="card1">
-                <div class="card-image1 card6"></div>
-            </div>
-        </div>
-        
-        <div class="btnLm">
-            <a href="airlines.html" class="btn-sm" id="laernMore">Learn More</a>
-        </div>
-    </div>
-    <!-- end airlines -->
+---
 
-    <!-- sponsored by -->
-    <div class="sponsored">
-        <h3>Sponsored By</h3>
-        <img src="./assets\img\revou.png" alt="revou" width="70" height="70">
-        <img src="./assets\img\kampusmerdeka.png" alt="kampusmerdeka" width="110" height="60">
-    </div>
-
-
-    contact us
-    <div class="contact">
-                <h2>Contact Us</h2>
-                <form action="#" method="post" id="contact-us">
-                    <input type="email" name="email" placeholder="Email" required>
-                    <textarea name="message" placeholder="Type Your Message..." required></textarea>
-                    <button type="submit" class="btn-sm">Submit</button>
-                </form>
-            </div>
+Thank you for choosing STEW for your game status predictions!
