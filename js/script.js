@@ -28,7 +28,7 @@ function smoothScroll(eID) {
   let distance = stopY > startY ? stopY - startY : startY - stopY;
   if (distance < 100) {
     scrollTo(0, stopY); return;
-  }
+  }3
   let speed = Math.round(distance / 100);
   if (speed >= 20) speed = 20;
   let step = Math.round(distance / 25);
