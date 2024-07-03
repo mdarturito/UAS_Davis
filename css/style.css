@@ -185,7 +185,7 @@ ul li button:hover {
 .cs2 {
     margin: 50;
     height: 100%;
-    background-image: url(../assets/img/gow.jpg);
+    background-image: url(../assets/GameProfile/cs2.gif);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -1029,7 +1029,7 @@ ul li button:hover {
 
 .card-img.card14 {
     background: url("../assets/destination/14malang.jpg");
-    background-size: cover;
+    background-size: cover;     
 }
 
 .card-img.card15 {
@@ -1038,7 +1038,7 @@ ul li button:hover {
 }
 
 .card-img.card16 {
-    background: url("../assets/destination/16yogyakarta.jpg");
+    background: url("../assets/GameProfile/cs2.gif");
     background-size: cover;
 }
 
