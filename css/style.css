@@ -191,6 +191,15 @@ ul li button:hover {
     background-position: center;
 }
 
+.dota2 {
+    margin: 50;
+    height: 100%;
+    background-image: url(../assets/GameProfile/dota2baru.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .card-overlay {
     flex-wrap: wrap;
     display: flex;
@@ -378,7 +387,7 @@ ul li button:hover {
 }
 
 .card-desc p {
-    color: rgb(77, 77, 77);
+    color: rgb(255, 255, 255);
     font-size: 15px;
     font-weight: 300;
 }
@@ -395,7 +404,7 @@ ul li button:hover {
 
 /*card2*/
 .card-img.card2 {
-    background: url("../assets/destination/20lombok.jpg");
+    background: url("../assets/GameProfile/cs2.gif");
     background-size: cover;
 
 }
@@ -991,7 +1000,7 @@ ul li button:hover {
 }
 
 .card-img.card2 {
-    background: url("../assets/destination/2.\ Batam.jpg");
+    background: url("../assets/GameProfile/dota2.gif");
     background-size: cover;
 }
 
