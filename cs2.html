@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travlio</title>
+    <!-- font  logo -->
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'>
+    <!-- font poppins-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <!-- link css -->
+    <link rel="stylesheet" href="css\style.css">
+    <!-- font awsome "Travlio" -->
+    <script src="https://kit.fontawesome.com/99449ba607.js" crossorigin="anonymous"></script>
+    <!-- shortcut icon -->
+    <link rel="shortcut icon" href="assets/icon/logo biru.png">
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <section class="top-nav">
+        <div class="navbar-logo">
+            <img src="./assets/icon/Steam_logo.png" alt="logo">
+        </div>
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+        </label>
+
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="games.html">Games</a></li>     
+        </ul>
+    </section>
+    <!-- end navbar -->
+
+    <!-- hero & motto -->
+    <div class="hero" id="hero">
+        <div class="card-overlay">
+            <div class="motto">
+                <h2>Welcome to Stew</h2>
+                <p>Your Number One Games Reviewer</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- about us -->
+    <div class="about-us">
+        <div class=gmbr-about><img src="./assets/img/steam-wallpaper.jpg" alt="traveling"></div>
+        <div class="ttg">
+            <h2>About Us</h2>
+            <p>
+                Steam Review adalah akses web dimana kalian
+            </p>
+            <a href="about.html" class="btn-sm">See More</a>
+        </div>
+    </div>
+
+    <!-- destination -->
+    <div class="destinasi">
+        <div class="ds-intro">
+            <h2>Destinations</h2>
+            <p class="deskripsi-destinasi">
+                Discover Your Dream Destinations
+                Explore a diverse array of captivating cities and scenic locales.
+                From bustling metropolises to tranquil escapes, our destination offers endless flight possibilities.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-img card16"></div>
+            <div class="card-desc card16">
+                <h4 class="pulau-yogya">Yogyakarta, The Special Region of Yogyakarta</h4>
+                <p class="description-yogya">Yogyakarta, a cultural gem, boasts ancient temples, traditional arts, and vibrant street food.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img card20"></div>
+            <div class="card-desc card20">
+                <h4 class="pulau-lombok">Lombok, West Nusa Tenggara</h4>
+                <p class="description-lombok">Lombok entices travelers with pristine beaches, lush landscapes, and the majestic Mount Rinjani.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img card21"></div>
+            <div class="card-desc card21">
+                <h4 class="kota-labuanbajo">Labuan Bajo, East Nusa Tenggara</h4>
+                <p class="description-labuanbajo">Labuan Bajo serves as a launching point to witness the wonders of Komodo Island and its unique wildlife.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="btnLm">
+        <a href="destination.html" class="btn-sm" id="laernMore">Learn More</a>
+    </div>
+    <!-- end destinasi -->
+
+    <!--footer -->
+    <footer class="site-footer" id="contact">
+        <div class="row">
+            <div class="footer1">
+                <h1>STEW</h1>
+                <h1>Your Games Best Friend</h1>
+                <div class="footer-center">
+                    <div>
+                        <i class="fa fa-map-marker"></i>
+                        <p><span>Go Work, Menara Rajawali, Jl. DR. Ide Anak Agung Gde Agung</span></p>
+                    </div>
+
+                    <div>
+                        <i class="fa fa-phone"></i>
+                        <p>+1.555.555.5555</p>
+                    </div>
+
+                    <div>
+                        <i class="fa fa-envelope"></i>
+                        <p><a href="#" class="footer-links">Stewer@gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- copyright -->
+        <div class="container1">
+            <div class="row1">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by
+                        <a href="#hero" class="footer-links" onclick="smoothScroll('hero');">SteVer</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer -->
+     
+    <script src="js/animation.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
