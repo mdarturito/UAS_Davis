@@ -1,3 +1,4 @@
+// Your existing code for line chart
 d3.csv("datasets/cs_all.csv").then(function(data) {
     data.forEach(d => {
         d.DateTime = new Date(d.DateTime);
@@ -5,13 +6,13 @@ d3.csv("datasets/cs_all.csv").then(function(data) {
         d["Negative reviews"] = -Math.abs(+d["Negative reviews"]); // Ensure negative reviews are negative
     });
 
-    createPlot(data);
+    createLineChart(data);
 });
 
-function createPlot(data) {
+function createLineChart(data) {
     const margin = { top: 20, right: 30, bottom: 30, left: 40 },
-          width = 1600 - margin.left - margin.right,
-          height = 500 - margin.top - margin.bottom;
+        width = 800 - margin.left - margin.right,
+        height = 400 - margin.top - margin.bottom;
 
     const svg = d3.select(".chart-container").append("svg")
         .attr("width", width + margin.left + margin.right)
@@ -27,7 +28,6 @@ function createPlot(data) {
         .domain([-5000, 5000]) // Set the Y-axis domain to include -5000 to 5000
         .range([height, 0]);
 
-    // Move the x-axis to the middle of the chart
     svg.append("g")
         .attr("transform", "translate(0," + y(0) + ")")
         .call(d3.axisBottom(x).tickFormat(d3.timeFormat("%Y")));
@@ -47,7 +47,7 @@ function createPlot(data) {
 
     svg.append("path")
         .data([data])
-        .attr("class", "line")
+        .attr("class", "line positive-line") // Add a class for positive reviews
         .attr("d", linePositive)
         .attr("fill", "none")
         .attr("stroke", "green")
@@ -55,13 +55,12 @@ function createPlot(data) {
 
     svg.append("path")
         .data([data])
-        .attr("class", "line")
+        .attr("class", "line negative-line") // Add a class for negative reviews
         .attr("d", lineNegative)
         .attr("fill", "none")
         .attr("stroke", "red")
         .attr("stroke-width", 2);
 
-    // Adding a zero line for clarity
     svg.append("line")
         .attr("x1", 0)
         .attr("x2", width)
@@ -70,3 +69,80 @@ function createPlot(data) {
         .attr("stroke", "black")
         .attr("stroke-width", 1);
 }
+
+// Your existing code for pie chart
+const pieData = [
+    { label: "Positive Reviews", count: 7083073 },
+    { label: "Negative Reviews", count: 1045754 }
+];
+
+const pieWidth = 400;
+const pieHeight = 400;
+const pieRadius = Math.min(pieWidth, pieHeight) / 2;
+
+const pieColor = d3.scaleOrdinal()
+    .domain(pieData.map(d => d.label))
+    .range(["#1f77b4", "#d62728"]);
+
+const pieArc = d3.arc()
+    .outerRadius(pieRadius - 10)
+    .innerRadius(0);
+
+const pieLabelArc = d3.arc()
+    .outerRadius(pieRadius - 40)
+    .innerRadius(pieRadius - 40);
+
+const pie = d3.pie()
+    .sort(null)
+    .value(d => d.count);
+
+const pieSvg = d3.select(".pie-chart")
+    .append("svg")
+    .attr("width", pieWidth)
+    .attr("height", pieHeight)
+    .append("g")
+    .attr("transform", "translate(" + pieWidth / 2 + "," + pieHeight / 2 + ")");
+
+const pieG = pieSvg.selectAll(".arc")
+    .data(pie(pieData))
+    .enter().append("g")
+    .attr("class", "arc");
+
+pieG.append("path")
+    .attr("d", pieArc)
+    .style("fill", d => pieColor(d.data.label))
+    .transition()
+    .ease(d3.easeLinear)
+    .duration(1000)
+    .attrTween("d", function(d) {
+        const interpolate = d3.interpolate({ startAngle: 0, endAngle: 0 }, d);
+        return function(t) {
+            return pieArc(interpolate(t));
+        };
+    });
+
+pieG.append("text")
+    .attr("class", "pie-label") // Added class for styling
+    .attr("transform", d => "translate(" + pieLabelArc.centroid(d) + ")")
+    .attr("dy", ".35em")
+    .text(d => `${d.data.label}: ${(d.data.count / 8158827 * 100).toFixed(2)}%`) // Display percentage
+    .style("text-anchor", "middle");
+
+const pieLegend = pieSvg.selectAll(".legend")
+    .data(pieData)
+    .enter().append("g")
+    .attr("class", "legend")
+    .attr("transform", (d, i) => "translate(" + (pieWidth / 2 + 50) + "," + (i * 30 - pieHeight / 2) + ")");
+
+pieLegend.append("rect")
+    .attr("x", 0)
+    .attr("width", 18)
+    .attr("height", 18)
+    .style("fill", d => pieColor(d.label));
+
+pieLegend.append("text")
+    .attr("x", 25)
+    .attr("y", 9)
+    .attr("dy", ".35em")
+    .style("text-anchor", "start")
+    .text(d => d.label);

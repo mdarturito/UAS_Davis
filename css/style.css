@@ -354,8 +354,8 @@ ul li button:hover {
     grid-template-rows: 170px 170px 80px;
     grid-template-areas: "image" "text";
     border-radius: 18px;
-    color: rgb(0, 6, 88);
-    background: white;
+    color: rgb(255, 255, 255);
+    background: rgb(7, 0, 105);
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
     text-align: left;
     transition: 0.5s ease;
@@ -873,8 +873,9 @@ ul li button:hover {
 
 /*agung*/
 .card-img-ag.card7 {
-    background: url("../assets/members/agung.jpg");
+    background: url("../assets/members/mahar.jpg");
     background-size: cover;
+    background-position: center center; /* Center the background image horizontally and vertically */
 }
 
 /*ajeng*/
@@ -1064,15 +1065,31 @@ ul li button:hover {
     background-size: cover;
 }
 
-.card-img.card17 {
-    background: url("../assets/destination/17solo.jpg");
-    background-size: cover;
+.card-img.card_thumbs_up {
+    background: url("../assets/img/positive_review.png");
+    background-size: contain;
 }
 
-.card-img.card18 {
-    background: url("../assets/destination/18surabaya.jpg");
-    background-size: cover;
+.card-img.card_thumbs_down {
+    background: url("../assets/img/thumbs_down.png");
+    background-size: contain;
+    background-color: #0d0057;
+    color: #000000;
 }
+
+/* Adjusted style for legend and pie chart labels */
+.legend {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    fill: white; /* Color legend text white */
+}
+
+.pie-label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    fill: white; /* Color pie chart labels white */
+}
+
 
 .card-img.card19 {
     background: url("../assets/destination/19denpasar.jpg");
@@ -1200,6 +1217,8 @@ ul li button:hover {
     color: #0F294D;
     animation: slide-up 1s ease-in-out;
 }
+
+
 
 /* page booking */
 .hero2 {
