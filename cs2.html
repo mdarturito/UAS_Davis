@@ -10,7 +10,7 @@
     <!-- font poppins-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
     <!-- link css -->
-    <link rel="stylesheet" href="css\style.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- font awsome "Travlio" -->
     <script src="https://kit.fontawesome.com/99449ba607.js" crossorigin="anonymous"></script>
     <!-- shortcut icon -->
@@ -68,9 +68,33 @@
                 Explore a diverse array of captivating cities and scenic locales.
                 From bustling metropolises to tranquil escapes, our destination offers endless flight possibilities.
             </p>
-            <!-- Visualization will be appended here -->
+            <div class="chart-container">
+                <!-- Visualization will be appended here -->
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img card16"></div>
+            <div class="card-desc card16">
+                <h4 class="pulau-yogya">Counter Strike 2</h4>
+                <p class="description-yogya">For over two decades, Counter-Strike has offered an elite competitive experience...
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img card16"></div>
+            <div class="card-desc card16">
+                <h4 class="pulau-yogya">Counter Strike 2</h4>
+                <p class="description-yogya">For over two decades, Counter-Strike has offered an elite competitive experience...
+                </p>
+            </div>
         </div>
     </div>
+    
+    
+    
+    
     <!-- end destinasi -->
 
     <!--footer -->
@@ -112,67 +136,11 @@
     <!-- end footer -->
      
     <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script>
-        d3.csv("datasets/cs_all.csv").then(function(data) {
-            data.forEach(d => {
-                d.date = new Date(d.date);
-                d.positive = +d.positive;
-                d.negative = +d.negative;
-            });
-
-            createPlot(data);
-        });
-
-        function createPlot(data) {
-            const margin = { top: 20, right: 30, bottom: 30, left: 40 },
-                  width = 800 - margin.left - margin.right,
-                  height = 400 - margin.top - margin.bottom;
-
-            const svg = d3.select(".ds-intro").append("svg")
-                .attr("width", width + margin.left + margin.right)
-                .attr("height", height + margin.top + margin.bottom)
-                .append("g")
-                .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-            const x = d3.scaleTime()
-                .domain(d3.extent(data, d => d.date))
-                .range([0, width]);
-
-            const y = d3.scaleLinear()
-                .domain([0, d3.max(data, d => Math.max(d.positive, d.negative))])
-                .range([height, 0]);
-
-            svg.append("g")
-                .attr("transform", "translate(0," + height + ")")
-                .call(d3.axisBottom(x));
-
-            svg.append("g")
-                .call(d3.axisLeft(y));
-
-            svg.selectAll(".bar.positive")
-                .data(data)
-                .enter().append("rect")
-                .attr("class", "bar positive")
-                .attr("x", d => x(d.date) - 10)
-                .attr("y", d => y(d.positive))
-                .attr("width", 10)
-                .attr("height", d => height - y(d.positive))
-                .attr("fill", "#4e79a7");
-
-            svg.selectAll(".bar.negative")
-                .data(data)
-                .enter().append("rect")
-                .attr("class", "bar negative")
-                .attr("x", d => x(d.date))
-                .attr("y", d => y(d.negative))
-                .attr("width", 10)
-                .attr("height", d => height - y(d.negative))
-                .attr("fill", "#e15759");
-        }
-    </script>
+    <script src="js/visualization.js"></script>
     <script src="js/animation.js"></script>
     <script src="js/script.js"></script>
     <script src="js/contact.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/observablehq-plot@0.2.0/dist/plot.umd.min.js"></script>
 </body>
 </html>

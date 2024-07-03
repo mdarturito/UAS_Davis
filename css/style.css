@@ -354,6 +354,7 @@ ul li button:hover {
     grid-template-rows: 170px 170px 80px;
     grid-template-areas: "image" "text";
     border-radius: 18px;
+    color: rgb(0, 6, 88);
     background: white;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
     text-align: left;
@@ -923,6 +924,27 @@ ul li button:hover {
     align-items: center;
     animation: slide-up 1s ease-in-out;
 
+}
+
+.ds-intro {
+    text-align: center; /* Center content inside ds-intro */
+}
+
+.ds-intro svg {
+    display: block;
+    margin: 0 auto;
+}
+
+.chart-container {
+    width: 100%;
+    overflow-x: scroll;
+    border: 1px solid #ddd;
+    padding-bottom: 1rem;
+}
+
+.chart-container svg {
+    display: block;
+    margin: 0 auto;
 }
 
 .card-price {
