@@ -200,6 +200,24 @@ ul li button:hover {
     background-position: center;
 }
 
+.gtaV {
+    margin: 50;
+    height: 100%;
+    background-image: url(../assets/GameProfile/gtaV_Background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.terraria {
+    margin: 50;
+    height: 100%;
+    background-image: url(../assets/GameProfile/terraria_background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .card-overlay {
     flex-wrap: wrap;
     display: flex;
@@ -994,7 +1012,7 @@ ul li button:hover {
   }
 
 .card-img.card1 {
-    background: url("../assets/destination/1.Aceh.jpg");
+    background: url("../assets/GameProfile/gtaV_logo.png");
     background-size: cover;
 
 }
@@ -1005,67 +1023,17 @@ ul li button:hover {
 }
 
 .card-img.card3 {
-    background: url("../assets/destination/3.\ Bengkulu.jpeg");
+    background: url("../assets/GameProfile/gtaV_logo.png");
     background-size: cover;
 }
 
 .card-img.card4 {
-    background: url("../assets/destination/4.\ Jambi.jpg");
+    background: url("../assets/GameProfile/terraria_logo.jpg");
     background-size: cover;
 }
 
 .card-img.card5 {
-    background: url("../assets/destination/5.\ Medan.jpg");
-    background-size: cover;
-}
-
-.card-img.card6 {
-    background: url("../assets/destination/6.\ Padang.jpg");
-    background-size: cover;
-}
-
-.card-img.card7 {
-    background: url("../assets/destination/7.\ Palembang.jpg");
-    background-size: cover;
-}
-
-.card-img.card8 {
-    background: url("../assets/destination/8.pangkalpinang.jpg");
-    background-size: cover;
-}
-
-.card-img.card9 {
-    background: url("../assets/destination/9.pekanbaru.jpg");
-    background-size: cover;
-}
-
-.card-img.card10 {
-    background: url("../assets/destination/10.bandarlampung.jpg");
-    background-size: cover;
-}
-
-.card-img.card11 {
-    background: url("../assets/destination/11.\ Tanjung\ Pinang.jpg");
-    background-size: cover;
-}
-
-.card-img.card12 {
-    background: url("../assets/destination/12.\ Bandung.jpg");
-    background-size: cover;
-}
-
-.card-img.card13 {
-    background: url("../assets/destination/13.\ Bangka\ Belitung.png");
-    background-size: cover;
-}
-
-.card-img.card14 {
-    background: url("../assets/destination/14malang.jpg");
-    background-size: cover;     
-}
-
-.card-img.card15 {
-    background: url("../assets/destination/15semarang.jpg");
+    background: url("../assets/GameProfile/pubg-logo.jpg");
     background-size: cover;
 }
 
@@ -1106,102 +1074,12 @@ ul li button:hover {
 }
 
 .card-img.card20 {
-    background: url("../assets/destination/20lombok.jpg");
+    background: url("../assets/GameProfile/gtaV_logo.png");
     background-size: cover;
 }
 
 .card-img.card21 {
-    background: url("../assets/destination/21labuanbajo.jpg");
-    background-size: cover;
-}
-
-.card-img.card22 {
-    background: url("../assets/destination/22kupang.jpg");
-    background-size: cover;
-}
-
-.card-img.card23 {
-    background: url("../assets/destination/23pontianak.jpg");
-    background-size: cover;
-}
-
-.card-img.card24 {
-    background: url("../assets/destination/24banjarmasin.jpeg");
-    background-size: cover;
-}
-
-.card-img.card25 {
-    background: url("../assets/destination/25balikpapan.jpg");
-    background-size: cover;
-}
-
-.card-img.card26 {
-    background: url("../assets/destination/26ambon.jpg");
-    background-size: cover;
-}
-
-.card-img.card27 {
-    background: url("../assets/destination/27.Mataram.jpg");
-    background-size: cover;
-}
-
-.card-img.card28 {
-    background: url("../assets/destination/28.Kendari.jpg");
-    background-size: cover;
-}
-
-.card-img.card29 {
-    background: url("../assets/destination/29.Gorontalo.jpg");
-    background-size: cover;
-}
-
-.card-img.card30 {
-    background: url("../assets/destination/30.Makassar.jpg");
-    background-size: cover;
-}
-
-.card-img.card31 {
-    background: url("../assets/destination/31.Manado.jpg");
-    background-size: cover;
-}
-
-.card-img.card32 {
-    background: url("../assets/destination/32.Palu.jpg");
-    background-size: cover;
-}
-
-.card-img.card33 {
-    background: url("../assets/destination/33.Ternate.jpg");
-    background-size: cover;
-}
-
-.card-img.card34 {
-    background: url("../assets/destination/34.Samarinda.jpg");
-    background-size: cover;
-}
-
-.card-img.card35 {
-    background: url("../assets/destination/35.Biak\ Papua.jpg");
-    background-size: cover;
-}
-
-.card-img.card36 {
-    background: url("../assets/destination/36.Jayapura.jpg");
-    background-size: cover;
-}
-
-.card-img.card37 {
-    background: url("../assets/destination/37.Merauke\ Papua.jpg");
-    background-size: cover;
-}
-
-.card-img.card38 {
-    background: url("../assets/destination/38.Timika.png");
-    background-size: cover;
-}
-
-.card-img.card39 {
-    background: url("../assets/destination/39.Sorong.jpg");
+    background: url("../assets/GameProfile/dota2.gif");
     background-size: cover;
 }
 
