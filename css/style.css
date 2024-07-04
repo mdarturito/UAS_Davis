@@ -1823,6 +1823,37 @@ table .air-lines {
     .menu>li {
         margin: 0px 10px;
     }
+
+        /* Example styles for dropdown */
+    .dropdown {
+        margin: 20px;
+    }
+
+    .dropdown label {
+        font-weight: bold;
+    }
+
+    .dropdown select {
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+    }
+
+    /* Example styles for chart container */
+    .chart-container {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .chart-container svg {
+        width: 100%;
+        height: auto;
+    }
+
+/* Additional styles as needed */
+
 }
 
 /* end responsive style */
