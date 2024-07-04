@@ -47,8 +47,8 @@
 
     <script>
         const pieDataAll = [
-            { label: "Positive Reviews", count: 7083073 },
-            { label: "Negative Reviews", count: 1045754 }
+            { label: "Positive Reviews", count: 1271831 },
+            { label: "Negative Reviews", count: 31118 }
         ];
         const pieDataArima = [
             { label: "Positive Reviews", count: 1638 },
@@ -95,7 +95,7 @@
             <div class="card-img card_thumbs_down"></div>
             <div class="card-desc card_thumbs_down">
                 <h4 class="pulau-yogya">Negative Review</h4>
-                <p class="description-yogya">1,045,754 Total Review
+                <p class="description-yogya">31,118 Total Review
                 </p>
             </div>
         </div>
@@ -105,11 +105,13 @@
             <!-- Pie chart SVG will be appended here -->
         </div>
 
+        <div class="pie-chart" id="piechart_arima"></div>
+
         <div class="card">
             <div class="card-img card_thumbs_up"></div>
             <div class="card-desc card_thumbs_up">
                 <h4 class="pulau-yogya">Positive Review</h4>
-                <p class="description-yogya">7,083,073 Total Review
+                <p class="description-yogya">1,271,831 Total Review
                 </p>
             </div>
         </div>
@@ -139,6 +141,7 @@
             <!-- SARIMA chart SVG will be appended here -->
         </div>
 
+        
         
     </div>
     
