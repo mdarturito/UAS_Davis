@@ -85,6 +85,145 @@ function createLineChart(data) {
         .attr("stroke-width", 1);
 }
 
+// Function to load ARIMA or SARIMA CSV data and create visualizations
+function loadAndCreateArimaSarimaCharts(csvFileName) {
+    if (!csvFileName) return;
+
+    const arimaFileName = csvFileName.replace("_all.csv", "_arima.csv");
+    const sarimaFileName = csvFileName.replace("_all.csv", "_sarima.csv");
+
+    Promise.all([
+        d3.csv("datasets/" + arimaFileName),
+        d3.csv("datasets/" + sarimaFileName)
+    ]).then(function(data) {
+        const arimaData = data[0];
+        const sarimaData = data[1];
+
+        arimaData.forEach(d => {
+            d.Date = new Date(d.Date);
+            d.Predicted_Positive = +d.Predicted_Positive;
+            d.Predicted_Negative = +d.Predicted_Negative;
+        });
+
+        sarimaData.forEach(d => {
+            d.Date = new Date(d.Date);
+            d.Predicted_Positive = +d.Predicted_Positive;
+            d.Predicted_Negative = +d.Predicted_Negative;
+        });
+
+        createArimaChart(arimaData); // Call function to create ARIMA chart
+        createSarimaChart(sarimaData); // Call function to create SARIMA chart
+    }).catch(function(error) {
+        console.error("Error loading ARIMA or SARIMA CSV file:", error);
+    });
+}
+
+// Check if csvFileName is not null or undefined, then load and create ARIMA and SARIMA visualizations
+if (csvFileName) {
+    loadAndCreateArimaSarimaCharts(csvFileName);
+}
+
+function createArimaChart(data) {
+    const margin = { top: 20, right: 30, bottom: 30, left: 40 },
+        width = 600 - margin.left - margin.right,
+        height = 300 - margin.top - margin.bottom;
+
+    const svg = d3.select(".arima-chart-container").append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    const x = d3.scaleTime()
+        .domain(d3.extent(data, d => d.Date))
+        .range([0, width]);
+
+    const y = d3.scaleLinear()
+        .domain([0, d3.max(data, d => Math.max(d.Predicted_Positive, d.Predicted_Negative))])
+        .nice()
+        .range([height, 0]);
+
+    const linePositive = d3.line()
+        .x(d => x(d.Date))
+        .y(d => y(d.Predicted_Positive));
+
+    const lineNegative = d3.line()
+        .x(d => x(d.Date))
+        .y(d => y(d.Predicted_Negative));
+
+    svg.append("path")
+        .datum(data)
+        .attr("fill", "none")
+        .attr("stroke", "steelblue")
+        .attr("stroke-width", 2)
+        .attr("d", linePositive);
+
+    svg.append("path")
+        .datum(data)
+        .attr("fill", "none")
+        .attr("stroke", "red")
+        .attr("stroke-width", 2)
+        .attr("d", lineNegative);
+
+    svg.append("g")
+        .attr("transform", "translate(0," + height + ")")
+        .call(d3.axisBottom(x));
+
+    svg.append("g")
+        .call(d3.axisLeft(y));
+}
+
+function createSarimaChart(data) {
+    const margin = { top: 20, right: 30, bottom: 30, left: 40 },
+        width = 600 - margin.left - margin.right,
+        height = 300 - margin.top - margin.bottom;
+
+    const svg = d3.select(".sarima-chart-container").append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    const x = d3.scaleTime()
+        .domain(d3.extent(data, d => d.Date))
+        .range([0, width]);
+
+    const y = d3.scaleLinear()
+        .domain([0, d3.max(data, d => Math.max(d.Predicted_Positive, d.Predicted_Negative))])
+        .nice()
+        .range([height, 0]);
+
+    const linePositive = d3.line()
+        .x(d => x(d.Date))
+        .y(d => y(d.Predicted_Positive));
+
+    const lineNegative = d3.line()
+        .x(d => x(d.Date))
+        .y(d => y(d.Predicted_Negative));
+
+    svg.append("path")
+        .datum(data)
+        .attr("fill", "none")
+        .attr("stroke", "darkorange")
+        .attr("stroke-width", 2)
+        .attr("d", linePositive);
+
+    svg.append("path")
+        .datum(data)
+        .attr("fill", "none")
+        .attr("stroke", "green")
+        .attr("stroke-width", 2)
+        .attr("d", lineNegative);
+
+    svg.append("g")
+        .attr("transform", "translate(0," + height + ")")
+        .call(d3.axisBottom(x));
+
+    svg.append("g")
+        .call(d3.axisLeft(y));
+}
+
+
 // Your existing code for pie chart
 const pieData = [
     { label: "Positive Reviews", count: 7083073 },
