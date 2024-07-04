@@ -45,6 +45,25 @@
         </div>
     </div>
 
+    <script>
+        const pieDataAll = [
+            { label: "Positive Reviews", count: 7083073 },
+            { label: "Negative Reviews", count: 1045754 }
+        ];
+        const pieDataArima = [
+            { label: "Positive Reviews", count: 1638 },
+            { label: "Negative Reviews", count: 551 }
+        ];
+        const pieDataSarima = [
+            { label: "Positive Reviews", count: 1638 },
+            { label: "Negative Reviews", count: 551 }
+        ];
+
+        renderPieChart('#piechart_all', pieDataAll, "All Reviews");
+        renderPieChart('#piechart_arima', pieDataArima, "ARIMA Predictions");
+        renderPieChart('#piechart_sarima', pieDataSarima, "SARIMA Predictions");
+    </script>
+
     <!-- about us -->
     <div class="about-us">
         <iframe width="550" height="315"
