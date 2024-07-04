@@ -1042,6 +1042,12 @@ ul li button:hover {
     background-size: cover;
 }
 
+.card-img.cardcomingsoon {
+    background: url("../assets/destination/comingsoon.jpg");
+    background-size: cover;
+    opacity:50% ;
+}
+
 .card-img.card_thumbs_up {
     background: url("../assets/img/positive_review.png");
     background-size: contain;
@@ -1068,7 +1074,7 @@ ul li button:hover {
 }
 
 
-.card-img.card19 {
+.card-img.card {
     background: url("../assets/destination/19denpasar.jpg");
     background-size: cover;
 }
