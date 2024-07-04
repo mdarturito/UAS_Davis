@@ -877,7 +877,7 @@ ul li button:hover {
     margin: 30px;
 }
 
-/* laya */
+/* artur */
 .card-img-ag {
     grid-area: image;
     background: url("../assets/members/artur.jpg");
@@ -905,22 +905,22 @@ ul li button:hover {
     transform: scale(1.13);
 }
 
-/*agung*/
+/*mahar*/
 .card-img-ag.card7 {
     background: url("../assets/members/mahar.jpg");
     background-size: cover;
     background-position: center center; /* Center the background image horizontally and vertically */
 }
 
-/*ajeng*/
+/*anom*/
 .card-img-ag.card8 {
     background: url("../assets/members/anom.jpg");
     background-size: cover;
 }
 
-/* izza */
+/* panpan */
 .card-img-ag.card9 {
-    background: url("../assets/members/izza.jpg");
+    background: url("../assets/members/tampan.png");
     background-size: cover;
 }
 
