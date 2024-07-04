@@ -223,7 +223,6 @@ function createSarimaChart(data) {
         .call(d3.axisLeft(y));
 }
 
-
 // Your existing code for pie chart
 const pieData = [
     { label: "Positive Reviews", count: 7083073 },
