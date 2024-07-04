@@ -1,17 +1,31 @@
-// Your existing code for line chart
-d3.csv("datasets/cs_all.csv").then(function(data) {
-    data.forEach(d => {
-        d.DateTime = new Date(d.DateTime);
-        d["Positive reviews"] = +d["Positive reviews"];
-        d["Negative reviews"] = -Math.abs(+d["Negative reviews"]); // Ensure negative reviews are negative
-    });
+// Parse the query parameter to get the CSV file name
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const csvFileName = urlParams.get('csv');
 
-    createLineChart(data);
-});
+// Function to load CSV data and create visualizations
+function loadAndCreateVisualization(csvFileName) {
+    d3.csv("datasets/" + csvFileName).then(function(data) {
+        data.forEach(d => {
+            d.DateTime = new Date(d.DateTime);
+            d["Positive reviews"] = +d["Positive reviews"];
+            d["Negative reviews"] = -Math.abs(+d["Negative reviews"]); // Ensure negative reviews are negative
+        });
+
+        createLineChart(data); // Call your existing function to create line chart
+    }).catch(function(error) {
+        console.error("Error loading CSV file:", error);
+    });
+}
+
+// Check if csvFileName is not null or undefined, then load and create visualization
+if (csvFileName) {
+    loadAndCreateVisualization(csvFileName);
+}
 
 function createLineChart(data) {
     const margin = { top: 20, right: 30, bottom: 30, left: 40 },
-        width = 800 - margin.left - margin.right,
+        width = 1200 - margin.left - margin.right, // Adjust width as needed
         height = 400 - margin.top - margin.bottom;
 
     const svg = d3.select(".chart-container").append("svg")
@@ -19,6 +33,7 @@ function createLineChart(data) {
         .attr("height", height + margin.top + margin.bottom)
         .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
 
     const x = d3.scaleTime()
         .domain(d3.extent(data, d => d.DateTime))

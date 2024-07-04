@@ -375,6 +375,13 @@ ul li button:hover {
 
 }
 
+.deskripsi-negative {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    text-align: left;
+
+}
+
 .card {
     display: grid;
     grid-template-columns: 320px;
@@ -963,12 +970,13 @@ ul li button:hover {
     margin: 0 auto;
 }
 
+
 .chart-container {
-    width: 100%;
-    overflow-x: scroll;
-    border: 1px solid #ddd;
-    padding-bottom: 1rem;
+    overflow-x: auto;  /* Enable horizontal scrolling */
+    width: 100%;       /* Ensure the container takes full width */
+    margin-bottom: 20px; /* Optional: Add margin for better spacing */
 }
+
 
 .chart-container svg {
     display: block;
