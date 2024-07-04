@@ -411,6 +411,18 @@ ul li button:hover {
     margin: 0px 25px;
 }
 
+.card-desc.card_thumbs_down{
+    grid-area: text;
+    margin: 0px 25px;
+    text-align: center;
+}
+
+.card-desc.card_thumbs_up{
+    grid-area: text;
+    margin: 0px 25px;
+    text-align: center;
+}
+
 .card-desc p {
     color: rgb(255, 255, 255);
     font-size: 15px;
@@ -1066,6 +1078,7 @@ ul li button:hover {
     background-size: contain;
     background-color: #0d0057;
     color: #000000;
+    text-align: center;
 }
 
 /* Adjusted style for legend and pie chart labels */
