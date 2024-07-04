@@ -9,6 +9,7 @@
     <script src="https://kit.fontawesome.com/99449ba607.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="assets/icon/logo biru.png">
     <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="js/pieChart.js"></script>
 </head>
 
 <body>
@@ -53,6 +54,27 @@
         </div>
     </div>
 
+    
+
+    <script>
+        const pieDataAll = [
+            { label: "Positive Reviews", count: 7083073 },
+            { label: "Negative Reviews", count: 1045754 }
+        ];
+        const pieDataArima = [
+            { label: "Positive Reviews", count: 1638 },
+            { label: "Negative Reviews", count: 551 }
+        ];
+        const pieDataSarima = [
+            { label: "Positive Reviews", count: 1638 },
+            { label: "Negative Reviews", count: 551 }
+        ];
+
+        renderPieChart('#piechart_all', pieDataAll, "All Reviews");
+        renderPieChart('#piechart_arima', pieDataArima, "ARIMA Predictions");
+        renderPieChart('#piechart_sarima', pieDataSarima, "SARIMA Predictions");
+    </script>
+
     <!-- destination -->    
     <div class="destinasi">
         <div class="ds-intro">
@@ -69,6 +91,8 @@
             </div>
         </div>
 
+        
+    
         <div class="card">
             <div class="card-img card_thumbs_down"></div>
             <div class="card-desc card_thumbs_down">
@@ -77,9 +101,9 @@
                 </p>
             </div>
         </div>
-
-        <div class="pie-chart">
-            <!-- Pie chart SVG will be appended here -->
+        
+        <div>
+            <div class="pie-chart" id="piechart_all"></div>
         </div>
 
         <div class="card">
@@ -103,7 +127,11 @@
         <div class="chart-container arima-chart-container">
             <!-- ARIMA chart SVG will be appended here -->
         </div>
-
+        
+        <div>
+            <div class="pie-chart" id="piechart_arima"></div>
+        </div>
+            
         <div class="card">
             <div class="card-img card_thumbs_down"></div>
             <div class="card-desc card_thumbs_down">
@@ -134,6 +162,8 @@
         <div class="chart-container sarima-chart-container">
             <!-- SARIMA chart SVG will be appended here -->
         </div>
+
+        <div class="pie-chart" id="piechart_sarima"></div>
 
         <div class="card">
             <div class="card-img card_thumbs_down"></div>
